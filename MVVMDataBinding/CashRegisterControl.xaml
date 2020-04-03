@@ -5,14 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVMDataBinding"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="1000">
+             d:DesignHeight="500" d:DesignWidth="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-            
+            <local:DollarControl Denomination="One" Quantity="{Binding Path=One}"/>
+            <local:DollarControl Denomination="Two" Quantity="{Binding Path=Two}"/>
+            <local:DollarControl Denomination="Five" Quantity="{Binding Path=Five}"/>
+            <local:DollarControl Denomination="Ten" Quantity="{Binding Path=Ten}"/>
+            <local:DollarControl Denomination="Twenty" Quantity="{Binding Path=Twenty}"/>
+            <local:DollarControl Denomination="Fifty" Quantity="{Binding Path=Fifty}"/>
+            <local:DollarControl Denomination="Hundred" Quantity="{Binding Path=Hundred}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1">
             <local:CoinControl Denomination="Penny" Quantity="{Binding Path=Penny}"/>
